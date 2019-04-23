@@ -42,6 +42,7 @@ class BookController extends Controller
         $book->judul = $request->get('judul');
         $book->penerbit = $request->get('penerbit');
         $book->tahun_terbit = $request->get('tahun_terbit');
+        $book->pengarang = $request->get('pengarang');
         $book->save();
 
         return redirect ('books')->with('success', 'Data buku telah ditambahkan');
