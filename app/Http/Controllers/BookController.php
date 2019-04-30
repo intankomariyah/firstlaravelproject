@@ -13,9 +13,9 @@ class BookController extends Controller
      */
     public function index()
     {
-        //
         $books=\App\Book :: all();
         return view('index', compact('books'));
+       
     }
 
     /**
@@ -83,10 +83,10 @@ class BookController extends Controller
     {
         //
         $book= \App\Book::find($id);
-        $book->title = $request->get('title');
-        $book->description = $request->get('description');
-        $book->qty = $request->get('qty');
-        $book->publisher = $request->get('publisher');
+        $book->judul = $request->get('judul');
+        $book->penerbit = $request->get('penerbit');
+        $book->tahun_terbit = $request->get('tahun_terbit');
+        $book->pengarang = $request->get('pengarang');
         $book->save();
         return redirect('books')->with('success', 'Data buku telah diubah');      
     }
