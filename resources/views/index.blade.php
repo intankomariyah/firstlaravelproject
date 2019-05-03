@@ -33,10 +33,10 @@
         <td>{{$book['id']}}</td>
         <td>{{$book['judul']}}</td>
         <td>{{$book['penerbit']}}</td>
-        <td>{{$book['tahuh_terbit']}}</td>
+        <td>{{$book['tahun_terbit']}}</td>
         <td>{{$book['pengarang']}}</td>
         
-        <td><a href="{{action('BookController@edit', $book['id'])}}" class="btn btn-warning">Edit</a></td>
+        <td><a href="{{action('BookController@edit', $book['id'])}}" class="btn btn-warning">Update</a></td>
         <td>
           <form action="{{action('BookController@destroy', $book['id'])}}" method="post">
             @csrf

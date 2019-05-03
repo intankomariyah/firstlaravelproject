@@ -7,7 +7,7 @@
   </head>
   <body>
     <div class="container">
-      <h2>Edit Data Buku</h2><br/>
+      <h2>Update Data Buku</h2><br/>
       <form method="post" action="{{action('BookController@update', $id)}}">
       @csrf
       <input name="_method" type="hidden" value="PATCH">
